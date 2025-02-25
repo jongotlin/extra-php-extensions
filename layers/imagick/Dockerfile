@@ -26,8 +26,8 @@ RUN make -j $(nproc) && make install
 
 # Compile libheif
 WORKDIR ${IMAGICK_BUILD_DIR}
-RUN curl -Ls -o libheif.tar.gz https://github.com/strukturag/libheif/releases/download/v1.13.0/libheif-1.13.0.tar.gz && tar xzf libheif.tar.gz
-WORKDIR ${IMAGICK_BUILD_DIR}/libheif-1.13.0
+RUN curl -Ls -o libheif.tar.gz https://github.com/strukturag/libheif/releases/download/v1.19.5/libheif-1.19.5.tar.gz && tar xzf libheif.tar.gz
+WORKDIR ${IMAGICK_BUILD_DIR}/libheif-1.19.5
 RUN ./configure --prefix ${INSTALL_DIR} --exec-prefix ${INSTALL_DIR}
 RUN make -j $(nproc) && make install
 
